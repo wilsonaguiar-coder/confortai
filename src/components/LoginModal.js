@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { signIn } from "next-auth/react";
+import Image from "next/image";
 
 export default function LoginModal({ isOpen, onClose }) {
   const [isLogin, setIsLogin] = useState(true);
@@ -53,6 +54,13 @@ export default function LoginModal({ isOpen, onClose }) {
   return (
     <div className="modal-overlay">
       <div className="glass-panel modal-content animate-fade-in">
+        <Image 
+          src="/logo.png" 
+          alt="ConfortAI" 
+          width={60} 
+          height={60} 
+          style={{ alignSelf: 'center', filter: 'drop-shadow(0 5px 15px rgba(168, 237, 234, 0.4))' }} 
+        />
         <h2>{isLogin ? "Bem-vindo de volta" : "Criar sua conta"}</h2>
         <p className="subtitle">
           {isLogin 
