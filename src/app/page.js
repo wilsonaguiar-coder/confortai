@@ -94,23 +94,24 @@ export default function Home() {
         <div className="orb orb-3"></div>
       </div>
       <main className={styles.container}>
-      {/* Top Navbar */}
-      <div className={styles.navBar}>
-        {status === "loading" ? null : session ? (
-          <div className={styles.userInfo}>
-            <span className={styles.userGreeting}>Bem-vindo(a), {session.user.name}</span>
-            <button className={styles.navBtn} onClick={() => signOut()}>Sair</button>
-          </div>
-        ) : (
-          <button className={styles.navBtn} onClick={() => setIsLoginModalOpen(true)}>
-            Salvar meu progresso / Entrar
-          </button>
-        )}
-      </div>
-
+      {/* Top Header */}
       <header className={`${styles.header} animate-fade-in`}>
-        <Image src="/logo.png" alt="ConfortAI" width={100} height={100} priority className={styles.logo} />
-        <h1 className={styles.title}>ConfortAI</h1>
+        <div className={styles.logoWrapper}>
+          <Image src="/logo.png" alt="ConfortAI" width={70} height={70} priority className={styles.logo} />
+        </div>
+        <div className={styles.titleWrapper}>
+          <h1 className={styles.title}>Confort<span className={styles.aiText}>AI</span></h1>
+          {status === "loading" ? null : session ? (
+            <div className={styles.userInfo}>
+              <span className={styles.userGreeting}>Olá, {session.user.name}</span>
+              <button className={styles.navBtn} onClick={() => signOut()}>Sair</button>
+            </div>
+          ) : (
+            <button className={styles.navBtn} onClick={() => setIsLoginModalOpen(true)}>
+              Salvar meu progresso / Entrar
+            </button>
+          )}
+        </div>
       </header>
 
       <div className={`glass-panel ${styles.chatContainer} animate-fade-in`}>

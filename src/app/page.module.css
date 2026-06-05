@@ -10,39 +10,35 @@
 }
 
 .navBar {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 2rem;
-  z-index: 10;
+  display: none; /* Moved into header */
 }
 
 .userInfo {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .userGreeting {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--text-main);
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-weight: 400;
 }
 
 .navBtn {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.8);
-  padding: 0.6rem 1.2rem;
-  border-radius: 30px;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
   color: var(--text-main);
   font-family: inherit;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  margin-top: 0.3rem;
 }
 
 .navBtn:hover {
@@ -52,31 +48,48 @@
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 2.5rem;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
   z-index: 10;
 }
 
+.logoWrapper {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  margin-bottom: 1.5rem;
   filter: drop-shadow(0 10px 25px rgba(168, 237, 234, 0.4));
   animation: floatLogo 6s ease-in-out infinite;
 }
 
 @keyframes floatLogo {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-5px); }
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: 200;
-  letter-spacing: 4px;
-  margin-bottom: 0.8rem;
-  background: linear-gradient(to right, #4a5d5a, #8ca5a1);
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  color: var(--text-main);
+}
+
+.aiText {
+  font-weight: 500;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
