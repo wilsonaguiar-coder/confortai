@@ -52,39 +52,37 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
   z-index: 10;
 }
 
 .logoWrapper {
+  flex: 1;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .logo {
-  filter: drop-shadow(0 10px 25px rgba(168, 237, 234, 0.4));
+  filter: drop-shadow(0 5px 15px rgba(168, 237, 234, 0.4));
   animation: floatLogo 6s ease-in-out infinite;
 }
 
 @keyframes floatLogo {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-.titleWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  50% { transform: translateY(-3px); }
 }
 
 .title {
-  font-size: 2.2rem;
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
   font-weight: 300;
   letter-spacing: 2px;
-  margin-bottom: 0;
+  margin: 0;
   color: var(--text-main);
+  white-space: nowrap;
 }
 
 .aiText {
@@ -92,6 +90,13 @@
   background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.authWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .motto {

@@ -97,10 +97,12 @@ export default function Home() {
       {/* Top Header */}
       <header className={`${styles.header} animate-fade-in`}>
         <div className={styles.logoWrapper}>
-          <Image src="/logo.png" alt="ConfortAI" width={70} height={70} priority className={styles.logo} />
+          <Image src="/logo.png" alt="ConfortAI" width={60} height={60} priority className={styles.logo} />
         </div>
-        <div className={styles.titleWrapper}>
-          <h1 className={styles.title}>Confort<span className={styles.aiText}>AI</span></h1>
+        
+        <h1 className={styles.title}>Confort<span className={styles.aiText}>AI</span></h1>
+
+        <div className={styles.authWrapper}>
           {status === "loading" ? null : session ? (
             <div className={styles.userInfo}>
               <span className={styles.userGreeting}>Olá, {session.user.name}</span>
@@ -108,7 +110,7 @@ export default function Home() {
             </div>
           ) : (
             <button className={styles.navBtn} onClick={() => setIsLoginModalOpen(true)}>
-              Salvar meu progresso / Entrar
+              Entrar
             </button>
           )}
         </div>
