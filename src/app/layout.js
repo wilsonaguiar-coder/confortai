@@ -12,7 +12,7 @@ export const metadata = {
   title: "ConfortAI",
   description: "Um espaço de acolhimento, inspiração e recomeços.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/icon.png",
   },
 };
 
