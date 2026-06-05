@@ -87,7 +87,13 @@ export default function Home() {
   };
 
   return (
-    <main className={styles.container}>
+    <>
+      <div className="bg-orbs">
+        <div className="orb orb-1"></div>
+        <div className="orb orb-2"></div>
+        <div className="orb orb-3"></div>
+      </div>
+      <main className={styles.container}>
       {/* Top Navbar */}
       <div className={styles.navBar}>
         {status === "loading" ? null : session ? (
@@ -123,8 +129,8 @@ export default function Home() {
             </div>
           ))}
           {isLoading && (
-            <div className={`${styles.typingIndicator} animate-pulse-slow`}>
-              Refletindo...
+            <div className={`${styles.typingIndicator} animate-fade-in-up`}>
+              Refletindo <span></span><span></span><span></span>
             </div>
           )}
           <div ref={messagesEndRef} />
@@ -143,8 +149,11 @@ export default function Home() {
             type="submit"
             className={styles.button}
             disabled={isLoading || !input.trim()}
+            aria-label="Enviar"
           >
-            Enviar
+            <svg viewBox="0 0 24 24">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+            </svg>
           </button>
         </form>
         <p className={styles.privacyNotice}>
@@ -154,5 +163,6 @@ export default function Home() {
 
       <LoginModal isOpen={isLoginModalOpen} onClose={() => setIsLoginModalOpen(false)} />
     </main>
+    </>
   );
 }
