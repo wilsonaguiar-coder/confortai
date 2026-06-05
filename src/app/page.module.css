@@ -62,7 +62,6 @@
 
 .logo {
   margin-bottom: 1.5rem;
-  border-radius: 50%;
   filter: drop-shadow(0 10px 25px rgba(168, 237, 234, 0.4));
   animation: floatLogo 6s ease-in-out infinite;
 }

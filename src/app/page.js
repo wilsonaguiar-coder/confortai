@@ -111,9 +111,6 @@ export default function Home() {
       <header className={`${styles.header} animate-fade-in`}>
         <Image src="/logo.png" alt="ConfortAI" width={100} height={100} priority className={styles.logo} />
         <h1 className={styles.title}>ConfortAI</h1>
-        <p className={styles.motto}>
-          "Não podemos voltar e fazer um novo começo, mas podemos recomeçar e fazer um novo fim."
-        </p>
       </header>
 
       <div className={`glass-panel ${styles.chatContainer} animate-fade-in`}>
